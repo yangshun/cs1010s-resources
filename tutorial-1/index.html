@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="revealjs/css/reveal.min.css">
-    <link rel="stylesheet" href="revealjs/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="../lib/revealjs/css/reveal.min.css">
+    <link rel="stylesheet" href="../lib/revealjs/css/theme/night.css" id="theme">
     <link rel="stylesheet" href="css/style.css">
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../lib/revealjs/lib/css/zenburn.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -27,7 +27,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'revealjs/css/print/pdf.css';
+        link.href = '../lib/revealjs/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
     </script>
@@ -373,8 +373,8 @@ def is_leap_year(year):
       </div>
     </div>
 
-    <script src="revealjs/lib/js/head.min.js"></script>
-    <script src="revealjs/js/reveal.min.js"></script>
+    <script src="../lib/revealjs/lib/js/head.min.js"></script>
+    <script src="../lib/revealjs/js/reveal.min.js"></script>
 
     <script>
 
@@ -395,12 +395,12 @@ def is_leap_year(year):
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-          { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: '../lib/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../lib/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../lib/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../lib/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../lib/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../lib/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
 
