@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>CS1010S Tutorial 1</title>
+
+    <meta name="description" content="How to make the most out of JavaScript">
+    <meta name="author" content="Tay Yang Shun">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="revealjs/css/reveal.min.css">
+    <link rel="stylesheet" href="revealjs/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'revealjs/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+<h1>CS1010S<br>Tutorial 1</h1>
+<p>By Tay Yang Shun</a></p>
+<p>
+  <a href="http://facebook.com/yangshun"><i class="fa fa-facebook-square fa-3x"></i></a>&nbsp;
+  <a href="http://github.com/yangshun"><i class="fa fa-github-square fa-3x"></i></a>&nbsp;
+  <a href="http://twitter.com/yangshunz"><i class="fa fa-twitter-square fa-3x"></i></a>
+</p>
+        </section>
+
+        <section>
+<p>For tutorial group 8, here's your real tutor</p>
+<h2>Sun Xiangxin</h2>
+        </section>
+
+        <section data-background="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10013971_746564502042767_976874099_n.jpg?oh=e27e08da8ae17a8675525fa6453acef7&oe=545C10BD&__gda__=1417748825_04d44602ef64eca0ccc4f86a6f691a45" data-background-size="contain"> 
+        </section>
+
+        <section>
+<h2>Lecture Recap</h2>
+        </section>
+
+        <section>
+<h2>Functions</h2>
+<ul>
+    <li>Combine multiple tasks into a single command</li>
+    <li>We don't care <strong>how</strong> it does it, we just need to know <strong>what</strong> it does</li>
+</ul>
+        </section>
+
+        <section>
+<h2>Why Write Functions?</h2>
+<ul>
+    <li>Break a program into smaller parts</li>
+    <li>Reuse code instead of rewriting it</li>
+</ul>
+        </section>
+
+        <section>
+<h2>Steps to Writing a Function</h2>
+<ol>
+    <li>Understand the purpose of the function</li>
+    <li>Define the data that comes into the function from the caller (in the form of parameters)</li>
+    <li>Decide on the set of steps that the program will use to accomplish this goal</li>
+    <li>Compute and return the intended value</li>
+</ol>
+        </section>
+
+        <section>
+<h2>Parts of the Function</h2>
+<ol>
+    <li>Name - Describe the purpose of the function</li>
+    <li>Inputs/ Function parameters - Variables that are passed into the function</li>
+    <li>Function Body - Your code</li>
+    <li>Output - Return value of the function</li>
+</ol>
+        </section>
+
+        <section>
+<h2>Tutorial 1</h2>
+        </section>
+
+        <section>
+<h2>Q2 - Nope</h2>
+<pre><code data-trim class="python">
+def odd(x):
+    if (x + 3) % 2 == 0:
+        return True
+    else:
+        return False
+</code></pre>
+<p>Redundant (and a little weird) conversion of<br>the parity of the input variable.</p>
+        </section>
+
+        <section>
+<h2>Q2 - Nope</h2>
+<pre><code data-trim class="python">
+def odd(x):
+    if ((x % 2) == 1):
+        return True
+    elif ((x % 2) == -1):
+        return True
+    else:
+        return False
+</code></pre>
+<p>Redundant brackets and the result of modulo <code>%</code> <br>in Python will be a non-negative value.</p>
+<p>Hence, the second <code>elif</code> block is redundant.</p>
+        </section>
+
+        <section>
+<h2>Q2 - Nope</h2>
+<pre><code data-trim class="python">
+def odd(x):
+    return x % 2 == 1
+    if x % 2 == 1: 
+        return True
+    else:
+        return False
+</code></pre>
+<p>Putting code after the <code>return</code> statement<br>does not cause it to be executed.</p>
+        </section>
+
+        <section>
+<h2>Q2 - Good</h2>
+<pre><code data-trim class="python">
+def odd(x):
+    if x % 2 == 0:
+        return False
+    else:
+        return True
+</code></pre>
+<p>By Samantha See</p>
+        </section>
+        
+        <section>
+<h2>Q2 - Good</h2>
+<pre><code data-trim class="python">
+def odd(x):
+    if x % 2 != 0:
+        return True
+    else:
+        return False
+</code></pre>
+<p>By Xia Xiao Bo</p>
+        </section>
+
+        <section>
+<h2>Q3 - Nope</h2>
+<pre><code data-trim class="python">
+def new_odd(x):
+    return odd(x)
+
+def odd(x):
+    if (x + 3) % 2 == 0:
+        return True
+    else:
+        return False
+</code></pre>
+<p>Not supposed to reuse the code from the previous question!</p>
+        </section>
+
+        <section>
+<h2>Q3 - Nope</h2>
+<pre><code data-trim class="python">
+def new_odd(x):
+    if x % 2 != 0:
+        return True
+    else:
+        return False
+</code></pre>
+<p>Blatantly ignoring the instructions and still used <code>if/else</code>!</p>
+        </section> 
+
+        <section>
+<h2>Q3 - Nope</h2>
+<pre><code data-trim class="python">
+def new_odd(x): 
+    while x % 2 > 0:
+        return True 
+    else:
+        return False
+</code></pre>
+<p><code>while</code> doesn't really make sense here.</p>
+        </section>   
+
+        <section>
+<h2>Q3 - Good</h2>
+<pre><code data-trim class="python">
+def new_odd(x):
+    return x%2 > 0
+</code></pre>
+<p>By Ang Yen Ling</p>
+        </section>
+
+        <section>
+<h2>Q3 - Good</h2>
+<pre><code data-trim class="python">
+def new_odd(x):
+    return x % 2 == 1
+</code></pre>
+<p>By Chua Wei Lin</p>
+        </section>
+
+        <section>
+<h2>Q4 - Nope</h2>
+<pre><code data-trim class="python">
+def number_of_digits(x):
+    if (x / 1) < 10:
+        return 1
+    elif (x / 1) < 100:
+        return 2
+    elif (x / 1) < 1000:
+        return 3
+    elif (x / 1) < 10000:
+        return 4
+    elif (x / 1) < 100000:
+        return 5
+    elif (x / 1) < 1000000:
+        return 6
+    elif (x / 1) < 10000000:
+        return 7
+    elif (x / 1) < 100000000:
+        return 8
+    elif (x / 1) < 1000000000:
+        return 9
+    elif (x / 1) < 10000000000:
+        return 10
+</code></pre>
+<p>Doesn't cover cases where <code>x >= 10000000000</code>.</p>
+        </section>
+
+        <section>
+<h2>Q4 - Nope</h2>
+<pre><code data-trim class="python">
+def number_of_digits(x):
+    import math
+    if x == 0:
+        return 1
+    elif x != 1000:
+        return int(math.log(x, 10)) + 1
+    else:
+        return round(math.log(x, 10)) + 1
+</code></pre>
+<p>Never use <code>import</code> within a function.</p>
+<p>Using log is a viable solution. Here's the correct answer:</p>
+<pre><code data-trim class="python">
+def number_of_digits(x):
+    return int(round(math.log(x, 10), 1)) + 1 if x != 0 else 1
+</code></pre>
+        </section>
+
+        <section>
+<h2>Q4 - Hmm</h2>
+<pre><code data-trim class="python">
+def number_of_digits(x):
+    return len(str(x))
+</code></pre>
+<p>There's a more fundamental way of doing<br>this without converting to a string.</p>
+        </section>
+
+        <section>
+<h2>Q4 - Recommended</h2>
+<pre><code data-trim class="python">
+def digits(i):
+    if i < 10:
+        return 1
+    else:
+        return 1 + digits(i // 10)
+</code></pre>
+<p>Solution using recursion. We will go through this again soon.</p>
+        </section>
+
+        <section>          
+<h2>Q5 - Nope</h2>
+<pre><code data-trim class="python">
+def bigger_sum(a, b, c):
+    if a > b > c:
+        return ( a*a + b*b )
+    elif b > a > c:
+        return ( b*b + a*a)
+    elif a > c > b:
+        return ( a*a + c*c )
+    elif b > c > a:
+        return ( b*b + c*c )
+    elif c > b > a:
+        return ( c*c + b*b )
+    elif c > a > b:
+        return ( c*c + a*a )
+</code></pre>
+<p>Redundant cases implemented. We don't have to<br>check the order of the two bigger numbers.</p>
+        </section>
+
+        <section>
+<h2>Q5 - Good</h2>
+<pre><code data-trim class="python">
+def bigger_sum(a, b, c):
+    if b > a and c > a:
+        return (b ** 2) + (c ** 2)
+    elif a > b and c > b:
+        return (a ** 2) + (c ** 2)
+    else:
+        return (a ** 2) + (b ** 2)
+</code></pre>
+<p>By Foo Li Wei</p>
+<hr>
+<p>Last <code>else</code> block doesn't need<br>conditions because it is the remaining case.</p>
+        </section>
+        
+        <section>
+<h2>Q5 - Good</h2>
+<pre><code data-trim class="python">
+def bigger_sum(a, b, c):
+    if a < b and a < c:
+        return (b ** 2 + c ** 2)
+    elif b < a and b < c:
+        return (a ** 2 + c ** 2)
+    else:
+        return (a ** 2 + b ** 2)
+</code></pre>
+<p>By Melvin Tan Jun Keong</p>
+<hr>
+<p>Brackets are redundant because the exponential operator <code>**</code> has higher
+precedence over the addition/substraction.</p>
+        </section>
+
+        <section>
+<h2>Q5 - Wow!</h2>
+<pre><code data-trim class="python">
+def bigger_sum(a, b, c):
+    return round((a**2 + b**2 + c**2 - (min(a, b, c)) ** 2), 6)
+</code></pre>
+<p>By Kelly Seah</p>
+<hr>
+<p><code>round()</code> is used to handle floating point errors in double values arithmetic. Actually, the code is correct even without the usage of <code>round()</code>.</p>
+        </section>
+
+        <section>
+<h2>Q6 - Recommended</h2>
+<pre><code data-trim class="python">
+def is_leap_year(year):
+  return (year % 400 == 0) or \
+         (year % 4 == 0 and not year % 100 == 0)
+</code></pre>
+<p>Short and elegant solution.</p>
+<p>Note the <code>\</code> is used there to allow code to be written across multiple lines.</p>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="revealjs/lib/js/head.min.js"></script>
+    <script src="revealjs/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
