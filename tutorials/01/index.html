@@ -267,10 +267,13 @@ def number_of_digits(x):
         return round(math.log(x, 10)) + 1
 </code></pre>
 <p>Never use <code>import</code> within a function.</p>
-<p>Using log is a viable solution. Here's the correct answer:</p>
+<p>Using <code>log</code> is a viable solution. Here's a possible answer using 
+the convenient <code>log10</code> function from the <code>math</code> package:</p>
 <pre><code data-trim class="python">
+import math
+
 def number_of_digits(x):
-    return int(round(math.log(x, 10), 1)) + 1 if x != 0 else 1
+    return int(math.log10(x), 1) + 1 if x != 0 else 1
 </code></pre>
         </section>
 
