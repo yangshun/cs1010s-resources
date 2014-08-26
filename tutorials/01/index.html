@@ -128,7 +128,7 @@ def odd(x):
     else:
         return False
 </code></pre>
-<p>Redundant brackets and the result of modulo <code>%</code> <br>in Python will be a non-negative value.</p>
+<p>Redundant brackets and the result of modulo <code>%</code> with a positive number (2 in this case) in Python will be a non-negative value.</p>
 <p>Hence, the second <code>elif</code> block is redundant.</p>
         </section>
 
@@ -289,11 +289,11 @@ def number_of_digits(x):
         <section>
 <h2>Q4 - Recommended</h2>
 <pre><code data-trim class="python">
-def digits(i):
-    if i < 10:
+def number_of_digits(x):
+    if x < 10:
         return 1
     else:
-        return 1 + digits(i // 10)
+        return 1 + digits(x // 10)
 </code></pre>
 <p>Solution using recursion. We will go through this again soon.</p>
         </section>
