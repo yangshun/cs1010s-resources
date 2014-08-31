@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>CS1010S Tutorial 1</title>
+
+    <meta name="description" content="How to make the most out of JavaScript">
+    <meta name="author" content="Tay Yang Shun">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/revealjs/css/reveal.min.css">
+    <link rel="stylesheet" href="../../lib/revealjs/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/revealjs/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../../lib/revealjs/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+<h1>CS1010S<br>Tutorial 2</h1>
+<p>By Tay Yang Shun</a></p>
+<p>
+  <a href="http://facebook.com/yangshun"><i class="fa fa-facebook-square fa-3x"></i></a>&nbsp;
+  <a href="http://github.com/yangshun"><i class="fa fa-github-square fa-3x"></i></a>&nbsp;
+  <a href="http://twitter.com/yangshunz"><i class="fa fa-twitter-square fa-3x"></i></a>
+</p>
+        </section>
+
+<!--         <section>
+<h2>Lecture Recap</h2>
+        </section>
+
+        <section>
+<h2>Functions</h2>
+<ul>
+    <li>Combine multiple tasks into a single command</li>
+    <li>We don't care <strong>how</strong> it does it, we just need to know <strong>what</strong> it does</li>
+</ul>
+        </section>
+
+        <section>
+<h2>Why Write Functions?</h2>
+<ul>
+    <li>Break a program into smaller parts</li>
+    <li>Reuse code instead of rewriting it</li>
+</ul>
+        </section>
+
+        <section>
+<h2>Steps to Writing a Function</h2>
+<ol>
+    <li>Understand the purpose of the function</li>
+    <li>Define the data that comes into the function from the caller (in the form of parameters)</li>
+    <li>Decide on the set of steps that the program will use to accomplish this goal</li>
+    <li>Compute and return the intended value</li>
+</ol>
+        </section>
+
+        <section>
+<h2>Parts of the Function</h2>
+<ol>
+    <li>Name - Describe the purpose of the function</li>
+    <li>Inputs/ Function parameters - Variables that are passed into the function</li>
+    <li>Function Body - Your code</li>
+    <li>Output - Return value of the function</li>
+</ol>
+        </section> -->
+
+        <section>
+<h2>Q1 - Okayyyyyy</h2>
+<pre><code data-trim class="python">
+def magnitude(x1, y1, x2, y2):
+    return hypot((x2-x1), (y2-y1))
+</code></pre>
+<p>By Ang Yen Ling</p>
+<hr>
+<p>Smart to use a <code>hypot</code> function.</p>
+<p>But try to write your own code. Not that hard what?</p>
+        </section>
+        
+        <section>
+<h2>Q1 - Good</h2>
+<pre><code data-trim class="python">
+def magnitude(x1, y1, x2, y2):
+    return sqrt((x2-x1)**2 + (y2-y1)**2)
+</code></pre>
+<p>By Ko Wing Lam</p>
+<p>Good use of <code>sqrt</code> function.</p>
+        </section>
+
+        <section>
+<h2>Q2 - Nope</h2>
+<pre><code data-trim class="python">
+def area(x, y):
+    return 1/2 * x * y
+</code></pre>
+<p>It's not clear what <code>x</code> and <code>y</code> are.</p>
+        </section>
+
+        <section>
+<h2>Q2 - Nope</h2>
+<pre><code data-trim class="python">
+def area(x,y):
+    base = x
+    height = y
+    return (0.5 * x * y)
+</code></pre>
+<p><code>base</code> and <code>height</code> declared but not used &gt;_&lt;</p>
+        </section> 
+
+        <section>
+<h2>Q2 - Good</h2>
+<pre><code data-trim class="python">
+def area(base, height):
+    return 1/2 * base * height
+</code></pre>
+<p>By Julia Cheng Jia Min</p>
+<hr>
+<p>Short and to the point.</p>
+        </section>   
+
+        <section>
+<h2>Q3a - Nope</h2>
+<pre><code data-trim class="python">
+def area2(height, base, angle):
+    return 1/2 * height * base * sin(angle)
+</code></pre>
+<p>Must the first two parameters really represent <code>height</code> and <code>base</code>?</p>
+        </section>
+
+        <section>
+<h2>Q3a - Good</h2>
+<pre><code data-trim class="python">
+def area2(A, B, AB):
+    return (0.5 * A * B * sin(AB))
+</code></pre>
+<p>By Susanti</p>
+<hr>
+<p>Just make use of the given formula. Won't go wrong (:</p>
+        </section>
+
+        <section>
+<h2>Q3b - Good</h2>
+<pre><code data-trim class="python">
+"""
+Write your answer within these triple quotes
+Answer: No. Because the two functions take in different 
+parameters in calculating area.
+"""
+</code></pre>
+<p>By Ang Yen Ling</p>
+<hr>
+<p>Model answer (:</p>
+        </section>
+
+        <section>
+<h2>Q4 - Nope</h2>
+<pre><code data-trim class="python">
+from math import *
+
+def area3(x1,y1,x2,y2,x3,y3):
+    a = hypot((x2-x1),(y2-y1))
+    b = hypot((x3-x2),(y3-y2))
+    c = hypot((x1-x3),(y1-y3))
+    s = (a+b+c)/2
+    return sqrt(s * (s - a) * (s - b) * (s - c))
+
+# Don't need to modify the following function
+def herons_formula(a, b, c):
+    s = (a + b + c) / 2
+    return sqrt(s * (s - a) * (s - b) * (s - c))
+</code></pre>
+<p>Why you no use the given <code>magnitude</code> and <code>herons_formula</code>?</p>
+        </section>
+
+        <section>
+<h2>Q4 - Good</h2>
+<pre><code data-trim class="python">
+from math import *
+
+def area3(x1, y1, x2, y2, x3, y3):
+    return herons_formula(magnitude(x1, y1, x2, y2), \
+                            magnitude(x2, y2, x3, y3), \
+                            magnitude(x3, y3, x1, y1))
+
+# Don't need to modify the following function
+def herons_formula(a, b, c):
+    s = (a + b + c) / 2
+    return sqrt(s * (s - a) * (s - b) * (s - c))
+</code></pre>
+<p>By Kelly Seah</p>
+<hr>
+<p>Well done! Made use of the given functions!</p>
+        </section>
+
+        <section>
+<h2>Q4 - Good</h2>
+<pre><code data-trim class="python">
+from math import *
+
+def area3(x1, y1, x2, y2, x3, y3):
+    # Return area of the triangle using Heron’s formula.
+    a = magnitude(x1, y1, x2, y2)
+    b = magnitude(x2, y2, x3, y3)
+    c = magnitude(x1, y1, x3, y3)
+    return herons_formula(a,b,c)
+
+# Don't need to modify the following function
+def herons_formula(a, b, c):
+    s = (a + b + c) / 2
+    return sqrt(s * (s - a) * (s - b) * (s - c))
+</code></pre>
+<p>By Susanti</p>
+<hr>
+<p>Very neat! Declaring intermediate variables rather than all of them being in one line makes the code very readable.</p>
+        </section>
+
+
+        <section>
+<h2>Q5</h2>
+<pre><code data-trim class="python">
+def foo1():
+    i = 0
+    result = 0 
+    while i < 10:   
+       result += i      
+       i += 1   
+    return result
+print(foo1())
+</code></pre>
+<p>Upon inspection, realize that the code is doing a summation of 0 to 9.</p>
+<p>0 + 1 + 2 + ... + 9 = 45</p>
+        </section>
+
+        <section>
+<h2>Q5</h2>
+<pre><code data-trim class="python">
+def foo2():
+    i = 0
+    result = 0
+    while i < 10:
+        if i == 3:
+            break
+        result += i
+        i += 1
+    return result
+print(foo2())
+</code></pre>
+<p>Similar to <code>foo1()</code>, but the loop stops when <code>i == 3</code></p>
+<p>0 + 1 + 2 = 3</p>
+        </section>
+
+        <section>
+<h2>Q5</h2>
+<pre><code data-trim class="python">
+def bar1():
+    result = 0
+    for i in range(10):
+        result += i
+    return result
+print(bar1())
+</code></pre>
+<p>Does exactly the same thing as <code>foo1()</code>, but a <code>for</code> loop version.</p>
+<p>0 + 1 + 2 = 3</p>
+        </section>
+
+        <section>
+<h2>Q5</h2>
+<pre><code data-trim class="python">
+def bar2():
+    result = 0
+    for i in range(10):
+        if i % 3 == 1:
+            continue
+        result += i
+    return result
+print(bar2())
+</code></pre>
+<p>Like <code>bar2()</code> but does not add to result when <code>i % 3 == 1</code>.</p>
+<p>0 + 2 + 3 + 5 + 6 + 8 + 9 = 33</p>
+        </section>
+
+        <section>
+<h2>Q6 - Good Try</h2>
+<pre><code data-trim class="python">
+def factorial(c):
+    if c==0:
+        return 1
+    elif c==1:
+        return 1
+    else:
+        return (c*factorial(c-1))
+    
+def sum_even_factorials(n):
+    a,b=0,0
+    while b<=n:
+        a=a+factorial(b)
+        b=b+2
+    return a
+</code></pre>
+<p>By Wang Yuxuan</p>
+<hr>
+<p><code>while</code> loop version.</p>
+<p>Code can be shortened. Usage of <code>a</code> and <code>b</code> as variable names is discouraged.</p>
+        </section>   
+
+        <section>
+<h2>Q6 - Good</h2>
+<pre><code data-trim class="python">
+def factorial(counter):
+    if counter == 1:
+        return 1
+    else:
+        return (counter * factorial(counter - 1))
+      
+def sum_even_factorials(n):
+    sum = 1
+    for counter in range(2, n+1, 2):
+        sum = sum + factorial(counter)
+    return sum
+</code></pre>
+<p>By Samantha See</p>
+<hr>
+<p>Short and simple. Makes use of a familiar function<br>you have learnt before: <code>factorial</code>.</p>
+        </section>
+
+        <section>
+<h2>Q6 - Good</h2>
+<pre><code data-trim class="python">
+def sum_even_factorials(n):
+    sum = 1
+    for i in range (2, n+1, 2):
+        sum = sum + factorial(i)
+    return sum
+
+def factorial(i):
+    if i == 0:
+        return 1
+    else:
+        return i * factorial(i-1)
+</code></pre>
+<p>By Julia Cheng Jia Min</p>
+<hr>
+<p>Very clear and to the point.</p>
+<p>But note that <code>sum</code> is a pre-defined function in Python.<br>Better not overwrite it.</p>
+        </section>
+
+        <section>
+<h2>Q6 - Smart</h2>
+<pre><code data-trim class="python">
+from math import *
+
+def sum_even_factorials(n):
+    if n >=0:
+        i=0
+        for j in range (0, n+1, 2):
+            i += factorial(j)
+        return (i)
+</code></pre>
+<p>By Susanti</p>
+<hr>
+<p>Makes use of <code>factorial</code> function from the <code>math</code> module. Brilliant.</p>
+        </section>
+
+        <section>
+<h2>Q7 - Cannot Lah</h2>
+<pre><code data-trim class="python">
+"""
+Write your answer within the triple quotes
+Answer: There will be error.
+
+"""
+</code></pre>
+<p>What error??? -.-</p>
+        </section>
+
+        <section>
+<h2>Q7 - Nope</h2>
+<pre><code data-trim class="python">
+"""
+Write your answer within the triple quotes
+Answer: TypoError
+
+"""
+</code></pre>
+<p>No such error in Python.</p>
+        </section>
+
+        <section>
+<h2>Q7 - Answer</h2>
+<pre><code data-trim class="python">
+# Ans: It will give "TypeError: 'int' object is not callable".
+# Passing f into the function f will cause the statement `return f(2)` to
+# be evaluated. When 2 is passed into f as an argument, it tries to return 2(2).
+# 2 is an integer, and not a function and cannot be invoked/called. 
+# Hence TypeError occurs.
+</code></pre>
+        </section>
+
+
+      </div>
+    </div>
+
+    <script src="../../lib/revealjs/lib/js/head.min.js"></script>
+    <script src="../../lib/revealjs/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../../lib/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../lib/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../lib/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../lib/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../lib/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../../lib/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
