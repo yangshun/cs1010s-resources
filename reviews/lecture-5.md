@@ -46,14 +46,14 @@ len(x) # => 4
 
 ##### Equality
 1. Identity
-- Means the SAME object (reference in memory)
-- We use the `is` operator to test for identity
-- Identical objects are equivalent
+  - Means the SAME object (reference in memory)
+  - We use the `is` operator to test for identity
+  - Identical objects are equivalent
 
 2. Equivalence
-- Two objects are equivalent (even if they are not the same object)
-- We use the `==` operator to test for equivalence
-- Equivalent objects **MAY NOT** be identical
+  - Two objects are equivalent (even if they are not the same object)
+  - We use the `==` operator to test for equivalence
+  - Equivalent objects **MAY NOT** be identical
 
 ```
 a = (1, 2)
