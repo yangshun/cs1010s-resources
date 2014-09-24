@@ -83,10 +83,8 @@ else:
 - `in` is used to check for existence of a string within another string
 - Comparison operators will compare strings in dictionary order. Strings that appear behind in the dictionary have a bigger value.
 ```
->>> 'a' < 'b'
-True
->>>'a' < 'ab'
-True
+'a' < 'b' # True
+'a' < 'ab' # True
 ```
 - A string is a sequence of characters, and can be indexed. First character is indexed with 0.
 - `s[start:stop:step]`. Note that the `stop` parameter is non-inclusive.
