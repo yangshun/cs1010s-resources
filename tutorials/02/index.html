@@ -99,10 +99,12 @@
 def magnitude(x1, y1, x2, y2):
     return hypot((x2-x1), (y2-y1))
 </code></pre>
-<p>By Ang Yen Ling</p>
-<hr>
-<p>Smart to use a <code>hypot</code> function.</p>
-<p>But try to write your own code. Not that hard what?</p>
+<div class="fragment">
+    <p>By Ang Yen Ling</p>
+    <hr>
+    <p>Smart to use a <code>hypot</code> function.</p>
+    <p>But try to write your own code. Not that hard what?</p>
+</div>
         </section>
         
         <section>
@@ -111,8 +113,10 @@ def magnitude(x1, y1, x2, y2):
 def magnitude(x1, y1, x2, y2):
     return sqrt((x2-x1)**2 + (y2-y1)**2)
 </code></pre>
-<p>By Ko Wing Lam</p>
-<p>Good use of <code>sqrt</code> function.</p>
+<div class="fragment">
+    <p>By Ko Wing Lam</p>
+    <p>Good use of <code>sqrt</code> function.</p>
+</div>
         </section>
 
         <section>
@@ -121,7 +125,9 @@ def magnitude(x1, y1, x2, y2):
 def area(x, y):
     return 1/2 * x * y
 </code></pre>
-<p>It's not clear what <code>x</code> and <code>y</code> are.</p>
+<div class="fragment">
+    <p>It's not clear what <code>x</code> and <code>y</code> are.</p>
+</div>
         </section>
 
         <section>
@@ -132,7 +138,9 @@ def area(x,y):
     height = y
     return (0.5 * x * y)
 </code></pre>
-<p><code>base</code> and <code>height</code> declared but not used &gt;_&lt;</p>
+<div class="fragment">
+    <p><code>base</code> and <code>height</code> declared but not used &gt;_&lt;</p>
+</div>
         </section> 
 
         <section>
@@ -141,9 +149,11 @@ def area(x,y):
 def area(base, height):
     return 1/2 * base * height
 </code></pre>
-<p>By Julia Cheng Jia Min</p>
-<hr>
-<p>Short and to the point.</p>
+<div class="fragment">
+    <p>By Julia Cheng Jia Min</p>
+    <hr>
+    <p>Short and to the point.</p>
+</div>
         </section>   
 
         <section>
@@ -152,7 +162,9 @@ def area(base, height):
 def area2(height, base, angle):
     return 1/2 * height * base * sin(angle)
 </code></pre>
-<p>Must the first two parameters really represent <code>height</code> and <code>base</code>?</p>
+<div class="fragment">
+    <p>Must the first two parameters really represent <code>height</code> and <code>base</code>?</p>
+</div>
         </section>
 
         <section>
@@ -161,9 +173,11 @@ def area2(height, base, angle):
 def area2(A, B, AB):
     return (0.5 * A * B * sin(AB))
 </code></pre>
-<p>By Susanti</p>
-<hr>
-<p>Just make use of the given formula. Won't go wrong (:</p>
+<div class="fragment">
+    <p>By Susanti</p>
+    <hr>
+    <p>Just make use of the given formula. Won't go wrong (:</p>
+</div>
         </section>
 
         <section>
@@ -175,9 +189,11 @@ Answer: No. Because the two functions take in different
 parameters in calculating area.
 """
 </code></pre>
-<p>By Ang Yen Ling</p>
-<hr>
-<p>Model answer (:</p>
+<div class="fragment">
+    <p>By Ang Yen Ling</p>
+    <hr>
+    <p>Model answer (:</p>
+</div>
         </section>
 
         <section>
@@ -197,7 +213,34 @@ def herons_formula(a, b, c):
     s = (a + b + c) / 2
     return sqrt(s * (s - a) * (s - b) * (s - c))
 </code></pre>
-<p>Why you no use the given <code>magnitude</code> and <code>herons_formula</code>?</p>
+<div class="fragment">
+    <p>Why you no use the given <code>magnitude</code> and <code>herons_formula</code>?</p>
+</div>
+        </section>
+
+        <section>
+<h2>Q4 - Good</h2>
+<pre><code data-trim class="python">
+from math import *
+
+def area3(x1, y1, x2, y2, x3, y3):
+    a = magnitude(x1,y1,x2,y2)
+    b = magnitude(x2,y2,x3,y3)
+    c = magnitude(x1,y1,x3,y3)
+    
+    return herons_formula(a, b, c)
+
+
+# Don't need to modify the following function
+def herons_formula(a, b, c):
+    s = (a + b + c) / 2
+    return sqrt(s * (s - a) * (s - b) * (s - c))
+</code></pre>
+<div class="fragment">
+    <p>By Xia Xiao Bo</p>
+    <hr>
+    <p>Well done! Made use of the given functions!</p>
+</div>
         </section>
 
         <section>
@@ -215,9 +258,11 @@ def herons_formula(a, b, c):
     s = (a + b + c) / 2
     return sqrt(s * (s - a) * (s - b) * (s - c))
 </code></pre>
-<p>By Kelly Seah</p>
-<hr>
-<p>Well done! Made use of the given functions!</p>
+<div class="fragment">
+    <p>By Kelly Seah</p>
+    <hr>
+    <p>Well done! Made use of the given functions!</p>
+</div>
         </section>
 
         <section>
@@ -237,9 +282,11 @@ def herons_formula(a, b, c):
     s = (a + b + c) / 2
     return sqrt(s * (s - a) * (s - b) * (s - c))
 </code></pre>
-<p>By Susanti</p>
-<hr>
-<p>Very neat! Declaring intermediate variables rather than all of them being in one line makes the code very readable.</p>
+<div class="fragment">
+    <p>By Susanti</p>
+    <hr>
+    <p>Very neat! Declaring intermediate variables rather than all of them being in one line makes the code very readable.</p>
+</div>
         </section>
 
 
@@ -255,8 +302,10 @@ def foo1():
     return result
 print(foo1())
 </code></pre>
-<p>Upon inspection, realize that the code is doing a summation of 0 to 9.</p>
-<p>0 + 1 + 2 + ... + 9 = 45</p>
+<div class="fragment">
+    <p>Upon inspection, realize that the code is doing a summation of 0 to 9.</p>
+    <p>0 + 1 + 2 + ... + 9 = 45</p>
+</div>
         </section>
 
         <section>
@@ -273,8 +322,10 @@ def foo2():
     return result
 print(foo2())
 </code></pre>
-<p>Similar to <code>foo1()</code>, but the loop stops when <code>i == 3</code></p>
-<p>0 + 1 + 2 = 3</p>
+<div class="fragment">
+    <p>Similar to <code>foo1()</code>, but the loop stops when <code>i == 3</code></p>
+    <p>0 + 1 + 2 = 3</p>
+</div>
         </section>
 
         <section>
@@ -287,8 +338,10 @@ def bar1():
     return result
 print(bar1())
 </code></pre>
-<p>Does exactly the same thing as <code>foo1()</code>, but a <code>for</code> loop version.</p>
-<p>0 + 1 + 2 = 3</p>
+<div class="fragment">
+    <p>Does exactly the same thing as <code>foo1()</code>, but a <code>for</code> loop version.</p>
+    <p>0 + 1 + 2 = 3</p>
+</div>
         </section>
 
         <section>
@@ -303,8 +356,10 @@ def bar2():
     return result
 print(bar2())
 </code></pre>
-<p>Like <code>bar2()</code> but does not add to result when <code>i % 3 == 1</code>.</p>
-<p>0 + 2 + 3 + 5 + 6 + 8 + 9 = 33</p>
+<div class="fragment">
+    <p>Like <code>bar2()</code> but does not add to result when <code>i % 3 == 1</code>.</p>
+    <p>0 + 2 + 3 + 5 + 6 + 8 + 9 = 33</p>
+</div>
         </section>
 
         <section>
@@ -325,10 +380,12 @@ def sum_even_factorials(n):
         b=b+2
     return a
 </code></pre>
-<p>By Wang Yuxuan</p>
-<hr>
-<p><code>while</code> loop version.</p>
-<p>Code can be shortened. Usage of <code>a</code> and <code>b</code> as variable names is discouraged.</p>
+<div class="fragment">
+    <p>By Wang Yuxuan</p>
+    <hr>
+    <p><code>while</code> loop version.</p>
+    <p>Code can be shortened. Usage of <code>a</code> and <code>b</code> as variable names is discouraged.</p>
+</div>
         </section>   
 
         <section>
@@ -346,9 +403,11 @@ def sum_even_factorials(n):
         sum = sum + factorial(counter)
     return sum
 </code></pre>
-<p>By Samantha See</p>
-<hr>
-<p>Short and simple. Makes use of a familiar function<br>you have learnt before: <code>factorial</code>.</p>
+<div class="fragment">
+    <p>By Samantha See</p>
+    <hr>
+    <p>Short and simple. Makes use of a familiar function<br>you have learnt before: <code>factorial</code>.</p>
+</div>
         </section>
 
         <section>
@@ -366,10 +425,12 @@ def factorial(i):
     else:
         return i * factorial(i-1)
 </code></pre>
-<p>By Julia Cheng Jia Min</p>
-<hr>
-<p>Very clear and to the point.</p>
-<p>But note that <code>sum</code> is a pre-defined function in Python.<br>Better not overwrite it.</p>
+<div class="fragment">
+    <p>By Julia Cheng Jia Min</p>
+    <hr>
+    <p>Very clear and to the point.</p>
+    <p>But note that <code>sum</code> is a pre-defined function in Python.<br>Better not overwrite it.</p>
+</div>
         </section>
 
         <section>
@@ -384,9 +445,35 @@ def sum_even_factorials(n):
             i += factorial(j)
         return (i)
 </code></pre>
-<p>By Susanti</p>
-<hr>
-<p>Makes use of <code>factorial</code> function from the <code>math</code> module. Brilliant.</p>
+<div class="fragment">
+    <p>By Susanti</p>
+    <hr>
+    <p>Makes use of <code>factorial</code> function from the <code>math</code> module. Brilliant.</p>
+</div>
+        </section>
+
+        <section>
+<h2>Q6 - Well Done</h2>
+<pre><code data-trim class="python">
+def sum_even_factorials(n):
+    if n == 0:
+        return 1
+    elif n % 2 == 0:
+        return fact(n) + sum_even_factorials(n-2)
+    else:
+        return sum_even_factorials(n-1)
+
+def fact(n):
+    if n == 1:
+        return 1
+    else:
+        return n * fact(n-1)
+</code></pre>
+<div class="fragment">
+    <p>By Melvin Tan Jun Keong</p>
+    <hr>
+    <p>Recursive version (:</p>
+</div>
         </section>
 
         <section>
@@ -410,7 +497,9 @@ Answer: TypoError
 
 """
 </code></pre>
-<p>No such error in Python.</p>
+<div class="fragment">
+    <p>No such error in Python.</p>
+</div>
         </section>
 
         <section>
@@ -423,7 +512,6 @@ Answer: TypoError
 # Hence TypeError occurs.
 </code></pre>
         </section>
-
 
       </div>
     </div>
