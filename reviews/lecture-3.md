@@ -113,7 +113,7 @@ def factorial(n):
 | O(n^3) | Cubic |
 | O(log n) | Logarithmic (Base is not important) |
 | O(nlog n) | - |
-| O(2<exp>n</exp>) | Exponential |
+| O(2^n) | Exponential |
 - Identify dominant term, ignore smaller terms
 - Ignore additive or multiplicative constants
 
@@ -137,7 +137,7 @@ def factorial(n):
 | Process | Time | Space |
 | --- | --- | --- |
 | Linear Recursion | O(n) | O(n) |
-| Tree Recursion (2 branches) | O(n) | O(2^n) |
+| Tree Recursion (2 branches) | O(2^n) | O(n) |
 | For/While Loop | O(n) | O(1) |
 | For loop in For loop | O(n^2) | O(1) |
 

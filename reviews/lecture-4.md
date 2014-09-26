@@ -35,10 +35,10 @@ f = lambda a: a * 2
 def make_x_multiplier(n):
   return lambda x: x * n
 
-multiply3 = make_x_multiplier(3):
+multiply3 = make_x_multiplier(3)
 type(multiply3) # => <class 'function'>
 multiply3(4) # => 12
-multiply5 = make_x_multiplier(5):
+multiply5 = make_x_multiplier(5)
 multiply5(4) # => 20
 ```
 
