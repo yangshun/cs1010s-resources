@@ -11,11 +11,11 @@ Higher Order Functions
 
 ##### Lambdas
 - `lambda`s are functions defined in **one** line.
-```
+```python
 lambda <params>: <return value>
 ```
 - Compare these two snippets
-```
+```python
 def f(a):
   return a * 2
 
@@ -31,7 +31,7 @@ f = lambda a: a * 2
 3. Both 1 & 2 can happen at the same time!
 
 ##### Functions as return values
-```
+```python
 def make_x_multiplier(n):
   return lambda x: x * n
 

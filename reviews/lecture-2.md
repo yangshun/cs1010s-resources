@@ -2,7 +2,7 @@ Functional Abstraction
 ==
 
 ##### General Form
-```
+```python
 def <name>(<formal parameters>):
   <body>
 ```
@@ -15,7 +15,7 @@ def <name>(<formal parameters>):
 - What if function does not return anything? The return value will be `None`
 
 ##### Variable Scope
-```
+```python
 x = 10
 def square(x):
   return x * x

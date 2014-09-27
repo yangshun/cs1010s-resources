@@ -5,7 +5,7 @@ Recursion, Iteration & Order of Growth
 - A function that calls itself is called a recursive function.
 - When a problem can be broken down into a smaller problem(s) that has the same method of solving as itself, this is a big hint for you to do recursion.
 - Let's revisit our favourite factorial function:
-```
+```python
 def factorial(n):
   if n == 0:
     return 1
@@ -22,7 +22,7 @@ def factorial(n):
   - Factorial: `fact(5)` -> `fact(4)` -> `fact(3)` -> `fact(2)` -> `fact(1)` -> `fact(0)`
 - Tree Recursion:
   - Fibonacci:
-```
+```python
 def fib(n):
   if n == 0: 
     return 0
@@ -32,7 +32,7 @@ def fib(n):
     return fib(n - 1) + fib(n - 2)
 ```
 - Mutual Recursion
-```
+```python
 def ping(n):
   if (n == 0): 
     return n
@@ -53,14 +53,14 @@ def pong(n):
 - Iteration means a repetition of a mathematical or computational procedure applied to the result of a previous application
 
 ###### `while` loop
-```
+```python
 while <expression>:
   <body>
 ```
 - **expression**: a statement that will evaluate to `True` or `False`.
 - **body**: block of code that will be evaluated if predicate <expression> is `True`.
 - Code within body will have to update variables or contain `break` so that the while loop does not run forever.
-```
+```python
 def factorial(n):
   counter, result = 1, 1
   while counter <= n:
@@ -70,7 +70,7 @@ def factorial(n):
 ```
 
 ###### `for` loop
-```
+```python
 for i in range([start,] stop[, step]):
   <body>
 ```
@@ -79,7 +79,7 @@ for i in range([start,] stop[, step]):
 - **NOT** necesssary to use `i` in the code.
 - **ALL** for loops can be re-written to use `while`. 
   - Just need to create an additional `i` variable that behaves like `counter` in the while example above.
-```
+```python
 def factorial(n):
   result = 1
   for i in range(1, n + 1):

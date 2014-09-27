@@ -32,7 +32,7 @@ Data Abstraction
 - `foo[-1]`: returns last element of `foo`, i.e. 1st element from the back
 - `len(foo)`: return number of elements of `foo`
 
-```
+```python
 x = (1, 2, 3, 4, 5)
 x[0] # => 1
 x[1:] # => (2, 3, 4, 5)
@@ -55,7 +55,7 @@ len(x) # => 4
   - We use the `==` operator to test for equivalence
   - Equivalent objects **MAY NOT** be identical
 
-```
+```python
 a = (1, 2)
 b = (1, 2)
 a == b # True
