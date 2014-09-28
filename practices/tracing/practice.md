@@ -95,6 +95,30 @@ print(total)
 
 ###### Q5
 ```python
+total = 0
+for i in range(10):
+  if i <= 5:
+    continue
+  elif i % 2:
+    break
+  total += i
+print(total)
+```
+
+###### Q6
+```python
+total = 0
+for i in range(10):
+  if i <= 5:
+    continue
+  else:
+    break
+  total += i
+print(total)
+```
+
+###### Q7
+```python
 i, num = 0, 0
 while -100 < num < 100:
   if i % 2 == 0:
@@ -105,7 +129,7 @@ while -100 < num < 100:
 print(num)
 ```
 
-###### Q6
+###### Q8
 ```python
 def foo(num, count):
   if num:

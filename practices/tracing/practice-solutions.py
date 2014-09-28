@@ -166,6 +166,50 @@ def q4():
 #######
 
 def q5():
+  total = 0
+  for i in range(10):
+    if i <= 5:
+      continue
+    elif i % 2:
+      break
+    total += i
+  print(total)
+
+# q5()
+
+# Printed output:
+# -6
+
+# Lesson:
+# This question tests on your understanding of while, if/elif.
+
+#######
+# Q6  #
+#######
+
+def q6():
+  total = 0
+  for i in range(10):
+    if i <= 5:
+      continue
+    else:
+      break
+    total += i
+  print(total)
+
+# q6()
+
+# Printed output:
+# 0
+
+# Lesson:
+# This question tests on your understanding of while, if/elif.
+
+#######
+# Q7  #
+#######
+
+def q7():
   i, num = 0, 0
   while -100 < num < 100:
     if i % 2 == 0:
@@ -175,7 +219,7 @@ def q5():
     i += 1
   print(num)
 
-# q5()
+# q7()
 
 # Printed output:
 # -100
@@ -184,10 +228,10 @@ def q5():
 # This question tests on your understanding of while, if/else and ability to spot trends.
 
 #######
-# Q6  #
+# Q8  #
 #######
 
-def q6():
+def q8():
   def foo(num, count):
     if num:
       return 1 + foo(num - num % (10 ** count), count + 1)
@@ -195,7 +239,7 @@ def q6():
       return 0
   print(foo(987654321, 1))
 
-# q6()
+# q8()
 
 # Printed output:
 # 9
