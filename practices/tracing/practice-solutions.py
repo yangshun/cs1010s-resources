@@ -203,7 +203,7 @@ def q6():
 # 0
 
 # Lesson:
-# This question tests on your understanding of while, if/elif.
+# This question tests on your understanding of while, if/else, continue, break.
 
 #######
 # Q7  #
