@@ -1,0 +1,65 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sorting Example</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    .center { text-align: center; width: 768px; margin: 50px auto;}
+    ol { text-align: left; }
+    #sortable { list-style-type: none; margin: 0; padding: 0; }
+    #sortable li { font-weight: bold; margin: 0 3px 3px 3px; padding: 0.4em; padding: 0.75em; font-size: 2.0em; height: 18px; float: left; text-align: center; }
+    #sortable li.sorted { background: green; color: #fff;}
+    #sort-input { width: 60%px; height: 50px; font-size: 2em; }
+  </style>
+  <script>
+  $(function () {
+    initSortable();
+    $('#sort-input').val([5, 7, 4, 9, 8, 5, 6, 3]);
+    generate();
+  });
+  
+  function generate () {
+    var text = $('#sort-input').val();
+    var input_array = text.split(',');
+    $('#sortable').html('');
+    for (var i = 0; i < input_array.length; i++) {
+      var el = $.trim(input_array[i]);
+      var $li = $('<li>').attr('class', 'ui-state-default').html(el);
+      $('#sortable').append($li);
+    }
+    initSortable();
+    // console.log(input_array);
+  }
+
+  function initSortable () {
+    $('#sortable').sortable();
+    $('#sortable').disableSelection();
+    $('#sortable li').click(function () {
+      $(this).toggleClass('sorted');
+    });
+  }
+
+  </script>
+</head>
+<body>
+  <div class="center">
+    <h1>Sorting Examples</h1>
+    <hr>
+    <ol>
+      <li>Drag the blocks to rearrange them.</li>
+      <li>Click on the blocks to toggle the background colours which can be used to indicate whether that block has been sorted.</li>
+      <li>Generate new entries by adding comma-separated values into the text field below and click the <strong>Generate</strong> button.</li>
+    </ol>
+    <input id="sort-input">
+    <button onclick="generate()">Generate</button>
+    <hr/>
+    <ul id="sortable">
+    </ul>
+  </div>
+</body>
+</html>
