@@ -178,7 +178,7 @@ def q5():
 # q5()
 
 # Printed output:
-# -6
+# 6
 
 # Lesson:
 # This question tests on your understanding of while, if/elif.
